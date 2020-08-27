@@ -21,11 +21,9 @@ prod_db  =  dj_database_url.config(conn_max_age=500)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '-5_xm@&al5)aogqid(re4o54#6bi3*@humulgd@&=p%3cg$a75'
 DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
     'default': dj_database_url.config(
