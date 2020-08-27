@@ -1,1 +1,1 @@
-web: gunicorn yoel-django.wsgi --log-file -
+web: gunicorn yoeldjango.wsgi --log-file -
