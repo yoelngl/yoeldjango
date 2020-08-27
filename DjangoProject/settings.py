@@ -25,14 +25,10 @@ prod_db  =  dj_database_url.config(conn_max_age=500)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 SECRET_KEY = '-5_xm@&al5)aogqid(re4o54#6bi3*@humulgd@&=p%3cg$a75'
-DEBUG = config('DEBUG', default=False, cast=bool)
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
 
-ALLOWED_HOSTS = ['yoeldjango.herokuapp.com']
+DEBUG = False
+
+ALLOWED_HOSTS = ['yoeldjango.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -82,12 +78,12 @@ WSGI_APPLICATION = 'DjangoProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 # DATABASES['default'].update(prod_db)
 
